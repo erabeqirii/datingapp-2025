@@ -14,6 +14,7 @@ public static class ApiUserExtensions
             Id = user.Id,
             DisplayName = user.DisplayName,
             Email = user.Email,
+            ImageUrl = user.Id,
             Token = tokenService.CreateToken(user)
         };
     }
