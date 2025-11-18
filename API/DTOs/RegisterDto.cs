@@ -13,4 +13,5 @@ public class RegisterDto
     [Required]
     [MinLength(4)]
     public string Password { get; set; } = "";
+    public string? ImageUrl { get; set; }
 }
