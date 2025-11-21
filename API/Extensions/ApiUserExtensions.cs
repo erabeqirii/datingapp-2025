@@ -12,9 +12,10 @@ public static class ApiUserExtensions
         return new UserDto
         {
             Id = user.Id,
+            MemberId = user.Member.Id,
             DisplayName = user.DisplayName,
             Email = user.Email,
-            ImageUrl = user.Id,
+            ImageUrl = user.ImageUrl,  
             Token = tokenService.CreateToken(user)
         };
     }

@@ -15,7 +15,12 @@
     </div>
 
     <h3 class="text-lg font-semibold text-primary">About {{ member.displayName }}</h3>
-
+  @if (accountService.currentUser()?.memberId === member.id && !memberService.editMode()) {
+    <button class="btn btn-primary"
+            (click)="memberService.editMode.set(true)">
+        Edit Profile
+    </button>
+  }
     @if (memberService.editMode()) {
 
         <form #editForm="ngForm"

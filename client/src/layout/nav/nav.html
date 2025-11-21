@@ -47,7 +47,7 @@
           <span>{{user.displayName}}</span>
         </div>
         <ul tabindex="-1" class="dropdown-content z-50 menu bg-base-100 rounded-box w-52 p-2 shadow-sm">
-            <li><a routerLink="/members/{{user.id}}">Edit profile</a></li>
+            <li><a [routerLink]="['/members', user.memberId]">Edit profile</a></li>
             <li><a (click)="logout()">Logout</a></li>
         </ul>
       </div>

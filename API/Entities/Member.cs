@@ -6,8 +6,8 @@ namespace API.Entities;
 
 public class Member
 {
-    public string Id {get; set;} = null!;
-    public string AppUserId { get; set; } = null!;   // FK to AppUser
+    public string Id { get; set; } = Guid.NewGuid().ToString(); 
+    public string AppUserId { get; set; } = null!; 
 
     public AppUser User { get; set; } = null!;
     public DateOnly DateOfBirth { get; set; }

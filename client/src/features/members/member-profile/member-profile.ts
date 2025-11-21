@@ -20,7 +20,7 @@ export class MemberProfile implements OnInit, OnDestroy {
       $event.preventDefault();
     }
   }
-  private accountService = inject(AccountService);
+  protected accountService = inject(AccountService);
   protected memberService = inject(MemberService);
   private toast = inject(ToastService)
   protected editableMember: EditableMember = {
