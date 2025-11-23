@@ -9,6 +9,8 @@ public class Member
     public string Id { get; set; } = Guid.NewGuid().ToString(); 
     public string AppUserId { get; set; } = null!; 
 
+    [JsonIgnore]
+    [ForeignKey(nameof(Id))]
     public AppUser User { get; set; } = null!;
     public DateOnly DateOfBirth { get; set; }
     public string? ImageUrl { get; set; }
@@ -22,5 +24,6 @@ public class Member
 
     [JsonIgnore]
     public List<Photo> Photos { get; set; } = [];
+
 
 }
