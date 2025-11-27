@@ -10,6 +10,9 @@ import { PaginatedResult } from '../types/pagination';
   providedIn: 'root',
 })
 export class MemberService {
+  sendMessage(recipientId: string | undefined, messageContent: string) {
+    throw new Error('Method not implemented.');
+  }
   private http = inject(HttpClient);
   private baseUrl = environment.apiUrl;
   editMode = signal(false);
